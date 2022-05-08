@@ -6,7 +6,6 @@ export function alphabetSubsequence(s: string): boolean {
     strArray.forEach((letter) => {
         if( i < alpha.indexOf(letter)){
             i = alpha.indexOf(letter);
-            console.log(i);
         } else {
             pass = false;
         }
