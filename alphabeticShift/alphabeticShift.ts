@@ -4,10 +4,11 @@ export function alphabeticShift(inputString: string): string {
     const inputarray = inputString.toLowerCase().split("");
     for(var i = 0; i < inputarray.length; i++){
         var index = alpha.indexOf(inputarray[i])+1;
+        console.log(index)
         index = index%26
         inputarray[i]=alpha[index];
     }
-    return inputarray.join();
+    return inputarray.join('');
 }
 
 console.log(alphabeticShift('crazy'));
