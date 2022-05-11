@@ -4,17 +4,20 @@ export function commonCharacterCount(s1: string, s2: string): number {
     var counter = 0;
 
     for(var j=0; j<a1.length; j++){
-         for(var i=0; i<a2.length; i++){
-            if(a1[j] == a2[i]){
-                a2.splice(i,1)
-                counter++;
-                j++;
-            }
+        var found = false;
+           for(var i=0; i<a2.length; i++){  
+                if(!found){
+                    if(a1[j] == a2[i]){
+                        console.log(a1[j], a2[i])
+
+                        a2.splice(i,1)
+                        counter++;
+                        found = true;
+                    }
+                } 
         }
+         
     }
-       
-    
-    console.log(a2);
     return counter;
 }
 
